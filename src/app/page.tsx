@@ -11,10 +11,10 @@ function HeartDivider() {
   return (
     <div className="px-4 py-2">
       <SectionReveal className="mx-auto flex w-full max-w-[600px] justify-center">
-        <div className="pulse-heart flex items-center justify-center gap-3 text-[1.6rem] leading-none text-[#b77a8d]">
-          <span>♡</span>
-          <span>♡</span>
-          <span>♡</span>
+        <div className="flex w-full max-w-[14rem] items-center justify-center gap-4 text-[#b77a8d]">
+          <span className="h-px flex-1 bg-[linear-gradient(90deg,transparent_0%,rgba(183,122,141,0.55)_100%)]" />
+          <span className="text-[1.5rem] leading-none">♡</span>
+          <span className="h-px flex-1 bg-[linear-gradient(90deg,rgba(183,122,141,0.55)_0%,transparent_100%)]" />
         </div>
       </SectionReveal>
     </div>

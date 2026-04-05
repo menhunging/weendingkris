@@ -8,6 +8,7 @@ export function SoundToggle() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [showHint, setShowHint] = useState(true);
+  const topOffset = "calc(env(safe-area-inset-top, 0px) + 1rem)";
 
   useEffect(() => {
     const audio = new Audio(AUDIO_SRC);
@@ -57,6 +58,7 @@ export function SoundToggle() {
             ? "translate-x-0 opacity-100"
             : "translate-x-3 opacity-0"
         }`}
+        style={{ top: topOffset }}
       >
         нажми на сердечко
       </div>
@@ -64,8 +66,9 @@ export function SoundToggle() {
       <button
         type="button"
         onClick={handleToggle}
-        className="fixed right-4 top-4 z-50 flex h-14 w-14 items-center justify-center text-white outline-none transition hover:scale-[1.03] focus:outline-none"
+        className="fixed right-4 z-50 flex h-14 w-14 items-center justify-center text-white outline-none transition hover:scale-[1.03] focus:outline-none"
         aria-label={isPlaying ? "Выключить музыку" : "Включить музыку"}
+        style={{ top: topOffset }}
       >
         <span className="absolute left-1/2 top-1 h-8 w-8 -translate-x-[85%] rounded-full bg-[#8b3951] shadow-[0_16px_40px_rgba(102,33,54,0.22)]" />
         <span className="absolute left-1/2 top-1 h-8 w-8 -translate-x-[15%] rounded-full bg-[#8b3951] shadow-[0_16px_40px_rgba(102,33,54,0.22)]" />

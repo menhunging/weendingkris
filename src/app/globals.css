@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fffdfb;
-  --foreground: #5f5760;
+  --background: #fff8f9;
+  --foreground: #5b2233;
 }
 
 html {
@@ -11,27 +11,27 @@ html {
 
 body {
   background:
-    radial-gradient(circle at top, rgba(245, 236, 241, 0.9) 0%, rgba(255, 253, 251, 0.75) 34%, rgba(250, 247, 244, 1) 100%),
+    radial-gradient(circle at top, rgba(132, 42, 68, 0.14) 0%, rgba(255, 248, 249, 0.82) 34%, rgba(252, 244, 246, 1) 100%),
     repeating-linear-gradient(
       135deg,
       rgba(255, 255, 255, 0.55) 0,
       rgba(255, 255, 255, 0.55) 18px,
-      rgba(244, 239, 242, 0.42) 18px,
-      rgba(244, 239, 242, 0.42) 36px
+      rgba(246, 233, 238, 0.5) 18px,
+      rgba(246, 233, 238, 0.5) 36px
     ),
     repeating-linear-gradient(
       45deg,
       rgba(255, 255, 255, 0.45) 0,
       rgba(255, 255, 255, 0.45) 18px,
-      rgba(247, 243, 246, 0.35) 18px,
-      rgba(247, 243, 246, 0.35) 36px
+      rgba(250, 238, 242, 0.42) 18px,
+      rgba(250, 238, 242, 0.42) 36px
     );
   color: var(--foreground);
 }
 
 @layer base {
   * {
-    border-color: #ece4e7;
+    border-color: #edd8de;
   }
 
   body {
@@ -80,6 +80,26 @@ body {
   }
 }
 
+@keyframes floating-heart-up {
+  0% {
+    transform: translate3d(0, 0, 0) scale(0.8);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: var(--heart-opacity, 0.55);
+  }
+
+  92% {
+    opacity: var(--heart-opacity, 0.55);
+  }
+
+  100% {
+    transform: translate3d(var(--heart-drift-x, 0), -820px, 0) scale(1.24);
+    opacity: 0;
+  }
+}
+
 .pulse-heart {
   animation: pulse-heart 1.8s ease-in-out infinite;
   transform-origin: center;
@@ -91,9 +111,16 @@ body {
   will-change: transform;
 }
 
+.floating-heart {
+  animation: floating-heart-up var(--heart-duration, 7s) linear infinite;
+  will-change: transform, opacity;
+  transform-origin: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .pulse-heart,
-  .location-photo-breathe {
+  .location-photo-breathe,
+  .floating-heart {
     animation: none;
   }
 }

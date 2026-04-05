@@ -50,63 +50,26 @@ export const weddingConfig = {
   },
   wishes: {
     title: "Пожелания гостям",
-    text: "Для нас самое главное - разделить этот день с вами легко, радостно и по-настоящему тепло.",
+    text: "",
     items: [
       {
         title: "Улыбайтесь",
         description:
           "Побольше улыбок, теплых встреч и моментов, которые захочется вспоминать снова.",
       },
-      {
-        title: "Отдыхайте",
-        description:
-          "Чувствуйте себя легко, наслаждайтесь атмосферой праздника и просто будьте рядом.",
-      },
-      {
-        title: "Празднуйте",
-        description:
-          "Танцуйте, смейтесь и разделите с нами этот красивый и важный день.",
-      },
     ],
   },
   dressCode: {
     title: "Дресс-код",
-    description: "Будем рады видеть вас в нарядах спокойных, светлых и благородных оттенков.",
     women: {
       title: "Для женщин",
       description: "Платья, костюмы или элегантные образы в светлой и пастельной гамме.",
-      images: [
-        {
-          src: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=900&q=80",
-          alt: "Женский образ в светлых оттенках",
-        },
-        {
-          src: "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=900&q=80",
-          alt: "Элегантный женский образ",
-        },
-        {
-          src: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80",
-          alt: "Платье в пастельной гамме",
-        },
-      ],
+      colors: ["#f4ece8", "#eadbdd", "#ddd7e8", "#cfc7c1"],
     },
     men: {
       title: "Для мужчин",
       description: "Классические костюмы, рубашки и образы в светлых, бежевых и серо-графитовых тонах.",
-      images: [
-        {
-          src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=900&q=80",
-          alt: "Мужской образ в классическом стиле",
-        },
-        {
-          src: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=900&q=80",
-          alt: "Мужской костюм в светлых оттенках",
-        },
-        {
-          src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80",
-          alt: "Элегантный мужской образ",
-        },
-      ],
+      colors: ["#ebe5de", "#d8d1cb", "#b9b1ab", "#8d8885"],
     },
   },
   gallery: {
@@ -134,7 +97,7 @@ export const weddingConfig = {
   schedule: [
     {
       time: "15:30",
-      title: "Сбор гостей. Фуршет.",
+      title: "Сбор гостей. Фуршет",
       description:
         "Время теплых встреч, улыбок и первых объятий перед началом нашего дня. .",
     },

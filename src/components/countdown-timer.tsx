@@ -73,8 +73,8 @@ export function CountdownTimer({
 
   if (timeLeft.isComplete) {
     return (
-      <div className="rounded-[2rem] border border-white/80 bg-white/75 px-6 py-8 text-center shadow-[0_24px_80px_rgba(134,118,128,0.08)] backdrop-blur">
-        <p className="font-display text-4xl leading-none text-[#5f5760]">
+      <div className="rounded-[2rem] border border-white/80 bg-white/75 px-6 py-8 text-center shadow-[0_24px_80px_rgba(102,33,54,0.1)] backdrop-blur">
+        <p className="font-display text-4xl leading-none text-[#5b2233]">
           {completeLabel}
         </p>
       </div>
@@ -86,12 +86,12 @@ export function CountdownTimer({
       {items.map((item) => (
         <div
           key={item.label}
-          className="rounded-[2rem] border border-white/80 bg-white/75 px-4 py-7 text-center shadow-[0_24px_80px_rgba(134,118,128,0.08)] backdrop-blur"
+          className="rounded-[2rem] border border-white/80 bg-white/75 px-4 py-7 text-center shadow-[0_24px_80px_rgba(102,33,54,0.1)] backdrop-blur"
         >
-          <div className="font-display text-[6.25rem] leading-none text-[#5f5760]">
+          <div className="font-display text-[6.25rem] leading-none text-[#5b2233]">
             {String(item.value).padStart(2, "0")}
           </div>
-          <div className="tracking-ui mt-3 text-sm uppercase text-[#ab9ba3]">
+          <div className="tracking-ui mt-3 text-sm uppercase text-[#b07c8b]">
             {item.label}
           </div>
         </div>

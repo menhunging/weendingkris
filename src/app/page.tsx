@@ -94,7 +94,7 @@ export default function Home() {
               </h1>
             </SectionReveal>
 
-            <SectionReveal className="relative mt-8 h-[45rem]" delay={0.1}>
+            <SectionReveal className="relative mt-8 h-[38rem]" delay={0.1}>
               <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
                 {floatingHearts.map((heart, index) => (
                   <span
@@ -121,29 +121,33 @@ export default function Home() {
               {hero.cards.map((card, index) => (
                 <div
                   key={card.name}
-                  className={`absolute w-[60%] max-w-[16.5rem] rounded-[1rem] bg-[#fffafb] p-3 pb-6 shadow-[0_24px_60px_rgba(102,33,54,0.14)] ${
+                  className={`absolute w-[63%] max-w-[17.5rem] rounded-[2.2rem] border border-white/70 bg-[linear-gradient(180deg,rgba(255,250,251,0.96),rgba(246,229,235,0.92))] p-3 shadow-[0_28px_70px_rgba(102,33,54,0.2)] backdrop-blur-[2px] ${
                     index === 0
-                      ? "left-[33%] top-0 z-20 -translate-x-1/2 rotate-[-4deg]"
-                      : "left-[67%] top-[22.5rem] z-10 -translate-x-1/2 rotate-[4deg]"
+                      ? "left-[34%] top-2 z-20 -translate-x-1/2 rotate-[-5deg]"
+                      : "left-[68%] top-[15.5rem] z-10 -translate-x-1/2 rotate-[5deg]"
                   }`}
                 >
-                  <div className="pointer-events-none absolute left-4 top-3 h-6 w-12 rotate-[-8deg] rounded-sm bg-[#f2dde4]/95 shadow-sm" />
-                  <div className="pointer-events-none absolute right-4 top-3 h-6 w-12 rotate-[10deg] rounded-sm bg-[#f2dde4]/95 shadow-sm" />
-                  <div className="overflow-hidden border border-[#edd8de] bg-white p-2 pb-5">
-                    <div className="relative aspect-[0.8/1] overflow-hidden bg-[#f5e6eb]">
-                      <Image
-                        src={card.image}
-                        alt={card.alt}
-                        fill
-                        priority={index === 0}
-                        sizes="(max-width: 600px) 64vw, 272px"
-                        className="object-cover sepia-[0.18] contrast-[0.92] saturate-[0.85]"
-                      />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,252,250,0.08),rgba(120,106,116,0.1))]" />
-                    </div>
+                  <span className="pointer-events-none absolute left-1 top-1 text-[3.4rem] leading-none text-[#d98aa1] drop-shadow-[0_6px_18px_rgba(91,34,51,0.3)]">
+                    ♥
+                  </span>
+                  <span className="pointer-events-none absolute bottom-0 right-1 text-[3.2rem] leading-none text-[#d98aa1] drop-shadow-[0_6px_18px_rgba(91,34,51,0.3)]">
+                    ♥
+                  </span>
+
+                  <div className="relative aspect-[0.78/1] overflow-hidden rounded-[1.7rem] bg-[#f5e6eb]">
+                    <Image
+                      src={card.image}
+                      alt={card.alt}
+                      fill
+                      priority={index === 0}
+                      sizes="(max-width: 600px) 64vw, 272px"
+                      className="object-cover"
+                    />
+                    <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.02),rgba(91,34,51,0.08))]" />
                   </div>
-                  <div className="px-3 pt-4 text-center">
-                    <p className="font-display text-4xl leading-none text-[#5b2233]">
+
+                  <div className="px-2 pb-1 pt-3 text-center">
+                    <p className="font-display text-[2rem] leading-none text-[#6d2d41]">
                       {card.name}
                     </p>
                   </div>
@@ -157,7 +161,7 @@ export default function Home() {
               </h2>
 
               <p className="mx-auto mt-5 max-w-[28rem] text-center text-[1.38rem] leading-[1.68] text-[#8b5f6d]">
-                Да-да, это мы - Юра и Кристина!
+                Да-да, это мы - <strong>Юра</strong> и <strong>Кристина</strong>!
                 <br />
                 И мы хотим сообщить вам радостную новость - МЫ ЖЕНИМСЯ! <br />
                 Мы приглашаем вас на нашу свадьбу! <br />

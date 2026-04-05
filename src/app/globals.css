@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fffdfb;
+  --foreground: #5f5760;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(245, 236, 241, 0.9) 0%, rgba(255, 253, 251, 0.75) 34%, rgba(250, 247, 244, 1) 100%),
+    repeating-linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.55) 0,
+      rgba(255, 255, 255, 0.55) 18px,
+      rgba(244, 239, 242, 0.42) 18px,
+      rgba(244, 239, 242, 0.42) 36px
+    ),
+    repeating-linear-gradient(
+      45deg,
+      rgba(255, 255, 255, 0.45) 0,
+      rgba(255, 255, 255, 0.45) 18px,
+      rgba(247, 243, 246, 0.35) 18px,
+      rgba(247, 243, 246, 0.35) 36px
+    );
+  color: var(--foreground);
+}
+
+@layer base {
+  * {
+    border-color: #ece4e7;
+  }
+
+  body {
+    font-family: var(--font-felidae), "Segoe UI", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-bakinskay), "Segoe UI", sans-serif;
+  }
+
+  .font-script {
+    font-family: var(--font-bakinskay), "Segoe UI", sans-serif;
+  }
+
+  .tracking-ui {
+    --tw-tracking: 0.45em;
+    letter-spacing: 0.45em;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes pulse-heart {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.12);
+  }
+}
+
+@keyframes location-photo-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+.pulse-heart {
+  animation: pulse-heart 1.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.location-photo-breathe {
+  animation: location-photo-breathe 14s ease-in-out infinite;
+  transform-origin: center;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-heart,
+  .location-photo-breathe {
+    animation: none;
+  }
+}

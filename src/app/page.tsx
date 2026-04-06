@@ -13,7 +13,12 @@ function HeartDivider() {
       <SectionReveal className="mx-auto flex w-full max-w-[600px] justify-center">
         <div className="flex w-full max-w-[14rem] items-center justify-center gap-4 text-[#b77a8d]">
           <span className="h-px flex-1 bg-[linear-gradient(90deg,transparent_0%,rgba(183,122,141,0.55)_100%)]" />
-          <span className="text-[1.5rem] leading-none">♡</span>
+          <span
+            className="text-[1.5rem] leading-none"
+            style={{ padding: "10px 0" }}
+          >
+            ♡
+          </span>
           <span className="h-px flex-1 bg-[linear-gradient(90deg,rgba(183,122,141,0.55)_0%,transparent_100%)]" />
         </div>
       </SectionReveal>
@@ -160,8 +165,12 @@ export default function Home() {
                 {hero.descTitle}
               </h2>
 
-              <p className="mx-auto mt-5 max-w-[28rem] text-center text-[1.38rem] leading-[1.68] text-[#8b5f6d]">
-                Да-да, это мы - <strong>Юра</strong> и <strong>Кристина</strong>!
+              <p
+                className="mx-auto mt-5 max-w-[28rem] text-center text-[1.38rem] leading-[1.68] text-[#8b5f6d]"
+                style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+              >
+                Да-да, это мы - <strong>Юра</strong> и <strong>Кристина</strong>
+                !
                 <br />
                 И мы хотим сообщить вам радостную новость - МЫ ЖЕНИМСЯ! <br />
                 Мы приглашаем вас на нашу свадьбу! <br />
@@ -249,7 +258,10 @@ export default function Home() {
                 <span className="absolute left-1/2 top-[0.42rem] h-4 w-4 -translate-x-1/2 rotate-45 bg-[#9e4a61]" />
               </div>
             </div>
-            <p className="mt-4 text-[1.28rem] leading-[1.68] text-[#8b5f6d]">
+            <p
+              className="mt-4 text-[1.28rem] leading-[1.68] text-[#8b5f6d]"
+              style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+            >
               {countdown.description}
             </p>
           </div>
@@ -295,7 +307,10 @@ export default function Home() {
                       <p className="tracking-ui text-xs uppercase text-[#b07c8b]">
                         {map.labels.address}
                       </p>
-                      <p className="mt-3 text-[1.18rem] leading-[1.6] text-[#5b2233]">
+                      <p
+                        className="mt-3 text-[1.18rem]  text-[#5b2233]"
+                        style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+                      >
                         {map.addressText}
                       </p>
                     </div>
@@ -303,7 +318,10 @@ export default function Home() {
 
                   <div className="flex justify-end">
                     <div className="relative max-w-[84%] rounded-[1.5rem] rounded-br-[0.45rem] border border-[#edd8de] bg-white/90 px-5 py-4 shadow-[0_12px_30px_rgba(102,33,54,0.06)]">
-                      <p className="text-[1.08rem] leading-[1.68] text-[#8b5f6d]">
+                      <p
+                        className="text-[1.08rem] text-[#8b5f6d]"
+                        style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+                      >
                         {map.description}
                       </p>
                     </div>
@@ -314,7 +332,8 @@ export default function Home() {
                   <Link
                     href={map.googleMaps}
                     target="_blank"
-                    className="rounded-full bg-[#8b3951] px-5 py-4 text-center text-[0.78rem] uppercase tracking-[0.22em] text-white transition hover:bg-[#74283f]"
+                    className="rounded-full bg-[#8b3951] px-5 py-4 text-center text-[0.78rem] uppercase tracking-[0.22em] text-white transition hover:bg-[#74283f] "
+                    style={{ letterSpacing: "0.22em", fontWeight: "600" }}
                   >
                     {map.labels.google}
                   </Link>
@@ -322,6 +341,7 @@ export default function Home() {
                     href={map.yandexMaps}
                     target="_blank"
                     className="rounded-full border border-[#d8bcc6] px-5 py-4 text-center text-[0.78rem] uppercase tracking-[0.22em] text-[#5b2233] transition hover:bg-[#faeef2]"
+                    style={{ letterSpacing: "0.22em", fontWeight: "600" }}
                   >
                     {map.labels.yandex}
                   </Link>
@@ -336,11 +356,17 @@ export default function Home() {
 
       <section className="px-4 py-8">
         <SectionReveal className="mx-auto w-full max-w-[600px] rounded-[2.5rem] border border-[#edd8de] bg-[#fffafb] p-6 shadow-[0_30px_100px_rgba(102,33,54,0.06)]">
-          <div className="max-w-[30rem]" style={{ textAlign: "center" }}>
+          <div className="" style={{ textAlign: "center" }}>
+            <p className="tracking-ui text-sm uppercase text-[#b07c8b] mb-4">
+              База отдыха Озёрная
+            </p>
             <h2 className="font-display text-[3.8rem] leading-none text-[#5b2233] ">
               {scheduleSection.title}
             </h2>
-            <p className="mt-4 text-[1.28rem] leading-[1.72] text-[#8b5f6d]">
+            <p
+              className="mt-4 text-[1.28rem] leading-[1.72] text-[#8b5f6d]"
+              style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+            >
               {scheduleSection.description}
             </p>
           </div>
@@ -355,14 +381,20 @@ export default function Home() {
                 >
                   <div className="absolute left-0 top-0 h-8 w-8 rounded-full border-[6px] border-[#fffafb] bg-[#9e4a61] shadow-[0_8px_18px_rgba(157,75,99,0.22)]" />
                   <div className="flex min-h-8 items-center">
-                    <p className="tracking-ui text-sm uppercase leading-none text-[#b07c8b]">
+                    <p
+                      className="tracking-ui text-sm uppercase leading-none text-[#b07c8b]"
+                      style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+                    >
                       {item.time}
                     </p>
                   </div>
                   <h3 className="mt-3 font-display text-[3.1rem] leading-none text-[#5b2233]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 max-w-[28rem] text-[1.28rem] leading-[1.72] text-[#8b5f6d]">
+                  <p
+                    className="mt-3 max-w-[28rem] text-[1.28rem] leading-[1.72] text-[#8b5f6d]"
+                    style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+                  >
                     {item.description}
                   </p>
                 </div>
@@ -380,11 +412,15 @@ export default function Home() {
             <h2 className="mt-4 font-display text-[3.8rem] leading-none text-[#5b2233]">
               {wishes.title}
             </h2>
-            <p className="mt-6 text-[1.28rem] leading-[1.72] text-[#8b5f6d]">
+            <p
+              className="mt-6 text-[1.28rem] leading-[1.72] text-[#8b5f6d]"
+              style={{ letterSpacing: "0.12em", fontWeight: "600" }}
+            >
               Приятном комплиментом для нас будет, если вместо букетов цветов Вы
               решите подарить нам{" "}
               <strong>бутылочку алкогольного напитка</strong> и{" "}
-              <strong>один цветок</strong> 🌸 с которым у вас ассоциируемся мы. <br/>
+              <strong>один цветок</strong> 🌸 с которым у вас ассоциируемся мы.{" "}
+              <br />
               Из них мы соберём особенный букет, наполненный смыслом и вашими
               чувствами.
             </p>
@@ -396,16 +432,26 @@ export default function Home() {
 
       <section className="px-4 py-8" style={{ textAlign: "center" }}>
         <SectionReveal className="mx-auto w-full max-w-[600px] rounded-[2.5rem] border border-[#edd8de] bg-[#fffafb] p-6 shadow-[0_30px_100px_rgba(102,33,54,0.06)]">
-          <div className="max-w-[30rem]">
+          <div className="" style={{ textAlign: "center" }}>
             <h2 className="font-display text-[3.8rem] leading-none text-[#5b2233]">
               {dressCode.title}
             </h2>
-            <p className="mt-4 text-[1.28rem] leading-[1.72] text-[#8b5f6d]">
-              Мы будем очень рады, если вы поддержите атмосферу нашего праздника
-              своим образом. 🤍 <br /> Будем признательны, если вы отдадите
-              предпочтение сдержанному стилю и спокойным тонам. <br />
-              Безупречный черный или лаконичные приглушенные оттенки станут
-              лучшим выбором для этого случая.
+            <p
+              className="mt-4 text-[1.28rem] leading-[1.72] text-[#8b5f6d]"
+              style={{
+                letterSpacing: "0.12em",
+                textAlign: "center",
+                fontWeight: "600",
+              }}
+            >
+              Нам будет очень приятно, если ваш образ поддержит настроение
+              нашего праздника. 🤍 <br />
+              <br />
+              Будем благодарны, если вы выберете пастельные и спокойные оттенки.
+              <br />
+              <br />
+              Элегантный черный и лаконичные приглушенные тона тоже прекрасно
+              подойдут для этого дня.
             </p>
           </div>
         </SectionReveal>

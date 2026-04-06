@@ -20,7 +20,7 @@ const felidae = localFont({
 
 export const metadata: Metadata = {
   title: "Кристина и Юрий | Свадебное приглашение",
-  description: "Современный one-page сайт-приглашение на свадьбу с программой дня и локацией.",
+  description: "🤍",
 };
 
 export default function RootLayout({
@@ -30,7 +30,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
-      <body className={`${floriselScript.variable} ${felidae.variable} antialiased`}>
+      <body
+        className={`${floriselScript.variable} ${felidae.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
